@@ -26,10 +26,7 @@ export function ContradictionsView({
     return (
       <Card>
         <CardBody className="py-12 text-center">
-          <ShieldAlert
-            size={28}
-            className="mx-auto mb-3 text-[var(--muted)]"
-          />
+          <ShieldAlert size={28} className="mx-auto mb-3 text-[var(--muted)]" />
           <p className="text-sm font-medium">No contradictions detected.</p>
           <p className="mt-1 text-xs text-[var(--muted)]">
             Sources broadly aligned. Try the Claims tab to inspect what was
@@ -48,7 +45,7 @@ export function ContradictionsView({
       {contradictions.map((c) => (
         <Card key={c.id}>
           <CardBody>
-            <div className="mb-3 flex items-start justify-between gap-3">
+            <div className="mt-3 mb-3 flex items-start justify-between gap-3">
               <div>
                 <div className="text-base font-semibold tracking-tight">
                   {c.topic}
@@ -57,7 +54,10 @@ export function ContradictionsView({
                   {c.rationale}
                 </p>
               </div>
-              <Badge tone={SEV_TONE[c.severity]} className="shrink-0 capitalize">
+              <Badge
+                tone={SEV_TONE[c.severity]}
+                className="shrink-0 capitalize"
+              >
                 {c.severity} severity
               </Badge>
             </div>
