@@ -59,9 +59,7 @@ export function UploadZone() {
     <div className="mx-auto max-w-4xl px-6 py-14">
       <div className="mb-10 flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-semibold tracking-tight">
-            Deal corpus
-          </h1>
+          <h1 className="text-3xl font-semibold tracking-tight">Deal corpus</h1>
           <p className="mt-2 max-w-xl text-sm text-[var(--muted)]">
             Add the documents your deal team is working with — pitch decks,
             reference call transcripts, diligence reports. Add at least two
@@ -79,9 +77,9 @@ export function UploadZone() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <Card>
+        <Card className="h-fit">
           <CardBody>
-            <h2 className="mb-3 text-sm font-semibold tracking-tight">
+            <h2 className="mt-3 mb-3 text-sm font-semibold tracking-tight">
               Upload files
             </h2>
             <label
@@ -111,15 +109,13 @@ export function UploadZone() {
             {busy && (
               <p className="mt-3 text-xs text-[var(--muted)]">Parsing…</p>
             )}
-            {err && (
-              <p className="mt-3 text-xs text-[var(--danger)]">{err}</p>
-            )}
+            {err && <p className="mt-3 text-xs text-[var(--danger)]">{err}</p>}
           </CardBody>
         </Card>
 
-        <Card>
+        <Card className="h-fit">
           <CardBody>
-            <h2 className="mb-3 text-sm font-semibold tracking-tight">
+            <h2 className="mt-3 mb-3 text-sm font-semibold tracking-tight">
               Paste text
             </h2>
             <div className="space-y-2">
@@ -183,9 +179,7 @@ export function UploadZone() {
       )}
 
       <div className="mt-10 flex flex-col items-end gap-2">
-        {!apiKey && (
-          <Badge tone="warn">Add an API key to continue</Badge>
-        )}
+        {!apiKey && <Badge tone="warn">Add an API key to continue</Badge>}
         {docs.length < 2 && (
           <Badge tone="muted">Add at least 2 documents to continue</Badge>
         )}
