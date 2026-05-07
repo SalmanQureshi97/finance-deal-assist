@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf7;
+  --foreground: #18181b;
+  --muted: #78716c;
+  --muted-bg: #f3f1ec;
+  --border: #e7e3da;
+  --card: #ffffff;
+  --accent: #4338ca;
+  --accent-soft: #eef2ff;
+  --danger: #b91c1c;
+  --danger-soft: #fee2e2;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+  --success: #047857;
+  --success-soft: #d1fae5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-bg: var(--muted-bg);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Scrollbar polish */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* Markdown defaults inside the memo view */
+.prose-memo h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.prose-memo h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.005em;
+}
+.prose-memo h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+.prose-memo p {
+  margin-bottom: 0.85rem;
+  line-height: 1.65;
+}
+.prose-memo ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+.prose-memo ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+.prose-memo li {
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+.prose-memo strong {
+  font-weight: 600;
+}
+.prose-memo blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.85rem;
+}
+.prose-memo code {
+  background: var(--muted-bg);
+  padding: 0.125rem 0.35rem;
+  border-radius: 4px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.85em;
+}
