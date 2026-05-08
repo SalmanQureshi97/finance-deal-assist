@@ -51,8 +51,6 @@ npm run dev
 
 Open `http://localhost:3000`. You'll be prompted for an Anthropic API key on first load — get one at [console.anthropic.com](https://console.anthropic.com/settings/keys). The key is stored locally in your browser; it never leaves your machine except to call `api.anthropic.com`.
 
-A small set of sample documents lives in `public/sample-docs/` (a fictional company, NovaBridge Technologies — pitch deck, reference call, CDD report). Drag-drop those three files onto the upload zone to try the full flow end-to-end.
-
 ## What I'd build next
 
 - **Server-side proxy for the Anthropic API.** Browser-side keys are fine for a local demo, not fine for any deployed version. A thin Next.js route handler would also unlock streaming-server-sent-events end-to-end without the SDK's browser shim.
